@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рецепты</title>
+</head>
+<body>
+
+<h3>Рецепт блюда на количества порций в размере - {{ serv }} штук(и):</h3>
+<ul>
+
+{% for ingredient, amount in recipe.items %}
+    <li>
+    <p>{{ ingredient }}: {{ amount }}</p>
+{% empty %}
+    <p>Такого рецепта не знаю :(</p>
+{% endfor %}
+    </li>
+<ul>
+
+</body>
+</html>
